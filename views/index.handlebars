@@ -1,0 +1,40 @@
+<div class='container'>
+  <div class="row">
+    {{#each burger_data}}
+      {{#unless this.devoured}}
+    <div class="col-xs-2 col-sm-3 col-md-4 uneaten">
+      <pre>{{this.id}}. {{this.burger_name}}</pre>  
+      <br>
+      <br>
+        <h3>Burger Menu</h3>
+      <form method="POST" action="/burgers/update?_method=PUT" class="button-size">
+        <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+          <br>
+          <button type="submit" class="btn btn-warning btn-xs" id="devour">Devour It!</button>        
+        {{/unless}}  
+      {{/each}}
+      </form>
+    </div>
+    <div class="col-xs-8 col-sm-6 col-md-4 centered" id="sign">
+        <img src="assets/img/burger.jpeg">
+        <h1>Eat-Da-Burger!</h1></div>
+    <div class="col-xs-2 col-sm-3 col-md-4"></div>
+</div>
+
+<div class="row">
+  <div class="col-xs-2 col-sm-3 col-md-4">   
+  </div>
+  <div class="col-xs-8 col-sm-6 col-md-4 text-center" id="addBurger">
+  	<form method="POST" action="/create">
+  		<p>Enter the kind of burger you like.</p>
+      <p> Then click 'Add Burger'.</p>
+  		<input name="burger" type="text" id="burger-search" class="form-control">
+      <br>
+		  <button class="btn btn-primary btn-md" type="submit" id="submit"><span class="glyphicon glyphicon-search"></span> Add Burger</button>
+	  </form>	
+  </div>
+  <div class="col-xs-2 col-sm-3 col-md-4">
+    
+  </div>
+</div>
+</div>
