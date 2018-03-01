@@ -9,7 +9,7 @@
 +
 +## Demo
 +
-+Find a working demo application can be found [here](https://------------/).
++Find a working demo application can be found [here](https:https://git.heroku.com/vast-inlet-32847.git).
 +
 
 +Now, open the local application on port 3000 at the URL: `http://localhost:3000/`.
