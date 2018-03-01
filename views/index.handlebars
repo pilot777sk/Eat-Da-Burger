@@ -1,13 +1,13 @@
 <div class="row">
   <div class="col-xs-2 col-sm-3 col-md-4 uneaten">
       <h3>Burger Menu</h3>
-    <form action="/{{this.id}}?_method=DELETE" method="POST">
       {{#each burgers}}
+    <form action="/{{this.id}}?_method=DELETE" method="POST">
         
           <p>{{this.id}}. {{this.burger_name}}  <button type="submit" class="btn btn-warning btn-xs" id="devour">Devour</button></p>        
-        
+    </form>    
       {{/each}}
-    </form>
+    
   </div>
   <div class="col-xs-8 col-sm-6 col-md-4 text-center" id="sign">
   		<img src="assets/img/burger.jpeg">
